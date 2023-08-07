@@ -80,7 +80,7 @@ module.exports = {
         const id = req.params.id;
         Note.deleteOne({_id:id}).then(()=>{
             //204 - wszystko poszło okej ale nic nie zwraca
-            res.sendstatus(204);
+            res.status(204).end();
         }).catch((error)=>{
             res.status(500).json({message : error.message})
         });
@@ -90,7 +90,7 @@ module.exports = {
         //Usuwanie wszystkich notatek
         Note.deleteMany({}).then(()=>{
             //204 - wszystko poszło okej ale nic nie zwraca
-            res.sendstatus(204);
+            res.status(204).end();
         }).catch((error)=>{
             res.status(500).json({message : error.message})
         });
