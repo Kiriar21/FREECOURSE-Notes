@@ -1,13 +1,21 @@
 const express = require('express');
 const router = express.Router();
 
-const testActions = require('../actions/api/test');
-
-
-// router.get('/', (req, res) => {
-//     res.send('Server running!');
-//   });
+const noteActions = require('../actions/api/noteActions');
   
-router.get('/', testActions.homepage);
+
+//pobieranie wszystkich notatek
+router.get('/notes', noteActions.getAllNotes);
+//pobieranie notatki
+router.get('/notes/:id', noteActions.getNote);
+//zapisaywanie notatek
+router.post('/notes', noteActions.saveNote);
+//edytowanie notatek
+router.put('/notes/:id', noteActions.updateNote);
+//usuwanie notatek
+router.delete('/notes/:id', noteActions.deleteNote);
+
+
+
 
 module.exports = router;
