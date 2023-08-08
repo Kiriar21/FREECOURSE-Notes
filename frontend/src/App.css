@@ -5,7 +5,18 @@ body {
 p {
   color: #ffffff; 
 }
-
+input {
+  display: block;
+  width: 100%;
+  padding: .375rem, .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #ffffff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+}
 .App {
   text-align: center;
 }
