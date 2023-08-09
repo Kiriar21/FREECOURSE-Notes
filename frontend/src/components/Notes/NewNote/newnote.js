@@ -27,6 +27,8 @@ function NewNote(props) {
         setShowForm(false);
     }
 
+
+    
     return(
         showForm ? (
             <div className="note">
@@ -51,7 +53,6 @@ function NewNote(props) {
                     onClick={()=>setShowForm(true)}
                 >Nowa Notatka</button>
             </div>
-            
         )
     );
 }
